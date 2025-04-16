@@ -1,9 +1,17 @@
-# Two sums
+# 167. Two Sum II - Input Array Is Sorted
 class Solution(object):
     def twoSum(self, numbers, target):
-        array_range = range(len(numbers))
+        left = 0
+        right = len(numbers) - 1
 
-        for i in array_range:
-            for j in array_range:
-                if (numbers[i] + numbers[j]) == target and i != j: 
-                    return [i + 1, j + 1] 
+        while left < right:
+            summ = numbers[left] + numbers[right]
+            
+            if summ == target and left != right:
+                return [left + 1, right + 1]
+            elif target < summ: 
+                right -= 1
+            elif target > summ:
+                left += 1
+            else:
+                break
