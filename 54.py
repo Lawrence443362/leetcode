@@ -12,9 +12,8 @@ class Solution:
 
     def slice_top(self, matrix, acc):
         if len(matrix) != 0:
-            acc += matrix[0]
-            matrix.pop(0)
-            
+            acc += matrix.pop(0)
+              
             self.slice_right(matrix, acc)
 
 
