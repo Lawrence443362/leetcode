@@ -1,6 +1,6 @@
 # 11. Container With Most Water
 class Solution:
-    def maxArea(self, height: List[int]) -> int:
+    def maxArea(self, height) -> int:
         left, right = 0, len(height) - 1
         max_water = 0
 
