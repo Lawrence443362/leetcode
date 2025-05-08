@@ -1,6 +1,5 @@
 # 155. Min Stack
 class MinStack:
-
     def __init__(self):
         self.min_value = None
         self.stack = []
@@ -18,8 +17,7 @@ class MinStack:
             if self.stack: 
                 self.min_value = min(self.stack)
             else:
-                self.min_value = None
-                
+                self.min_value = None       
 
     def top(self) -> int:
         if self.stack:
